@@ -1,0 +1,536 @@
+/*Start Variables*/
+:root{
+    --main-color:#10cab7;
+}
+/*End Variables*/
+/*Start Components*/
+html{
+    scroll-behavior:smooth;
+}
+/*End Components*/
+
+*{box-sizing:border-box;}
+body{
+    font-family :'work sans',  sans-serif;
+}
+.parent{
+    background-color:#eee;
+}
+.container{
+    padding-left:15px;
+    padding-right:15px;
+    margin-left: auto;
+    margin-right:auto;
+
+}
+/*small*/
+@media(min-width:768px){
+    .container{
+        width:750px;
+    }
+}
+
+/*Medium*/
+@media(min-width:992px){
+    .container{
+        width:970px;
+    }
+}
+
+/*Large Screens*/
+@media(min-width:1200px){
+    .container{
+        width:1100px;
+    }
+}
+/*start Header*/
+.header{
+    padding:20px;
+}
+.header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.header .logo{
+    width:100px;
+    cursor:pointer;
+}
+
+.header .logo.zoom-in{
+    width:30%;
+    transition: 0.3s;
+    Z-index:10;
+}
+
+.header .links{
+    position: relative;
+}
+.header .links:hover .icons span:nth-child(2){
+    width:100%;
+}
+.header .links .icons{
+    top:0;
+    width:30px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    cursor:pointer;
+}
+.header .links .icons.hide{
+    display:none;
+}
+.header .links .icons span {
+    background-color:#333;
+    margin-bottom:5px;
+    height:3px;
+}
+.header .links .icons span:first-child{
+    
+    width:100%
+}
+.header .links .icons span:nth-child(2){
+    transition:0.3s;
+    width:60%
+}
+.header .links .icons span:last-child{
+
+    width:100%
+}
+
+.header .links ul{
+    list-style:none;
+    position:absolute;
+    margin:0;
+    padding:0;
+    background-color:#f6f6f6;
+    right:0;
+    min-width:200px;
+    top:calc(100% + 20px);
+    display:none;
+    z-index:1;
+}
+
+.header .links ul:before{
+    content:"";
+    border-width:10px;
+    border-style:solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position:absolute;
+    right:5px;
+    top:-20px;
+}.header .links ul.show{
+    display:block;
+    
+}
+
+.header .links ul li a{
+    display:block;
+    padding:15px;
+    text-decoration:none;
+    color:#333;
+    transition:0.3s;
+}
+.header .links ul li a:hover{
+    padding-left:25px;
+}
+.header .links ul li:not(:last-child) a{
+    border-bottom: 1px solid #ddd;
+}
+/*End Header*/
+/*Start Landing section*/
+
+.landing{
+    background-image:url(../Images/image.jpg);
+    background-size:cover;
+    height:calc(100vh - 60px);
+
+}
+.landing .intro-text{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50% , -50%);
+    text-align:center;
+    width: 360px;
+    max-width: 100%;
+}
+.landing .intro-text h1{
+    margin:0;
+    font-size:50px;
+    color:var(--main-color);
+    font-weight:bold;
+}
+.landing .intro-text p{
+    color:#fff;
+    font-size:18px;
+    line-height:1.8;
+
+}
+
+/*End Landing section*/
+/*Start Categories section*/
+.health-care{
+    padding-top:30px;
+    padding-bottom:60px;
+    background-color:#f6f6f6;
+}
+.health-care .container{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap:20px;
+}
+.health-care .container h2{
+    position:absolute;
+    color:#A5CD81;
+    font-size:100px;
+    font-weight:800;
+    text-align:center;
+    margin-top: 0;
+    margin-left: 20%;
+}
+
+.health-care .section{
+    margin-top:40%;
+    padding:20px;
+    text-align:center;
+
+}
+.health-care .section img{
+    width:100%;
+    border: 2 solid transparent;
+    border-radius:8px;
+    cursor:pointer;
+}
+.health-care .section.zoom-in{
+    width:150%;
+    transition:.4s;
+    background-color:#ddd;
+    z-index:2;
+}
+.health-care .section h3{
+    font-size: 30px;
+    font-weight:800;
+    color:var(--main-color);
+}
+.health-care .section p{
+    line-height:1.8;
+    font-size:18px;
+    color:#797979;
+}
+.health-care .section button{
+    width:100%;
+    height:40px;
+    border:2px solid #777;
+    border-radius:10px;
+    background-color:var(--main-color);
+    color:#222;
+    font-size:24px;
+    font-weight:bold;
+    cursor:pointer;
+}
+.health-care .section button a{
+    text-decoration:none;
+    color:#1980cf;
+}
+@media(max-width:768px){
+    .health-care .section{
+        margin-top:30%;
+        position:relative;
+    }
+    .health-care .container h2{
+    position: absolute;
+    font-size: 50px;
+    margin-top: 15px;
+    margin-left: 25px;
+    margin-bottom: -24px;
+    }
+}
+/*@media(max-width:992px){
+    .health-care .section{
+        margin-top:30%;
+        position:relative;
+    }
+    .health-care .container h2{
+        position: absolute;
+        font-size: 50px;
+        margin-top: 36px;
+        margin-left: 70px;
+        margin-bottom: -10px;
+    }
+}*/
+/*End Categories section*/
+/*Start Beauty Services section*/
+.beauty{
+    padding-top:30px;
+    padding-bottom:60px;
+    background-color:#f3ebeb;
+
+}
+.beauty .container h2{
+    position:absolute;
+    color:#A5CD81;
+    font-size:100px;
+    font-weight:800;
+    text-align:center;
+    margin-top: 0;
+    margin-left: 14%;
+
+}@media(max-width:767px) {
+    .beauty .container h2{
+        font-size:50px;
+        
+    }
+}
+.beauty .container p{
+    display: inline-block;
+    position: relative;
+    margin-top: 15%;
+    margin-left: 20px;
+    line-height: 1.8;
+    font-size: 24px;
+    color:#797979;
+    text-align:center;
+}
+@media(max-width:992px) {
+
+    .beauty .container p{
+        margin-top: 40%;
+
+    }
+}
+.beauty .beauty-content{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap:10px;
+    margin-top:80px;
+
+}
+.beauty .beauty-content .card{
+    background-color: #d4cbcb;
+}
+.beauty .beauty-content .card-image{
+    max-width:100%;
+    border-radius:10px;
+    margin-left: 27px;
+    margin-top: 10px;
+}
+@media(max-width:992px){
+    .beauty .beauty-content{
+        margin:auto;
+    }
+}
+@media(max-width:768px){
+    .beauty .beauty-content .card-image{
+        margin-left:10%;
+    }
+}
+.beauty .beauty-content .card-info{
+    position:relative;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+}
+.beauty .beauty-content .card-info .card-title{
+    color:var(--main-color);
+    font-size:30px;
+    font-weight:bold;
+    margin-bottom:-50px;
+}
+.beauty .beauty-content .card-info .card-btn{
+    width:90%;
+    height:40px;
+    border:2px solid #777;
+    border-radius:10px;
+    background-color:var(--main-color);
+    color:#222;
+    font-size:24px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-bottom:40px;
+    margin-left:18px;
+}
+.beauty .beauty-content .card-info .card-btn a{
+    text-decoration:none;
+    color:#1980cf;
+}
+/*End Beauty Services section*/
+/*start About US section*/
+.about-us{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #d0dcdf
+
+}
+.about-us .container h2{
+    position:relative;
+    color:#A5CD81;
+    font-size:100px;
+    font-weight:800;
+    text-align:center;
+    margin-top:15px;
+    margin-left: 10%;
+}
+@media(max-width:767px) {
+    .about-us .container h2{
+        font-size:50px;
+        
+    }
+}
+.about-us .about-content{
+    margin-top:100px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+@media(max-width:992px){
+    .about-us .about-content{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+.about-us .about-content .about-image{
+    position: relative;
+    width:371px;
+    height:288px;
+    z-index: 1;
+}
+@media(max-width:992px){
+    .about-us .about-content .about-image{
+        margin:0 auto 50px;
+    }
+}
+.about-us .about-content .about-image::before{
+    content: "";
+    position: absolute;
+    background-color: #ebeced;
+    width: 100px;
+    height: calc(100% + 80px);
+    top: -40px;
+    left: -20px;
+    z-index: -1;
+
+}
+.about-us .about-content .about-image::after{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 227px;
+    border-left: 80px solid var(--main-color);
+    border-bottom: 60px solid var(--main-color);
+    right: -155px;
+    top: -40px;
+    z-index: -1;
+}
+@media(max-width:992px){
+    .about-us .about-content .about-image::before,
+    .about-us .about-content .about-image::after{
+        display:none;
+    }
+}
+.about-us .about-content .about-image img{
+    max-width:100%
+}
+.about-us .about-content .about-text{
+    flex-basis:calc(100% - 650px);
+}
+@media(max-width:992px){
+    .about-us .about-content .about-text{
+        margin-top:50px;
+    }
+}
+.about-us .about-content .about-text p:first-of-type{
+    font-weight:bold;
+    line-height:2;
+    margin-bottom:50px;
+    
+}
+.about-us .about-content .about-text hr{
+    width:50%;
+    display:inline-block;
+    border-color:var(--main-color);
+
+}
+.about-us .about-content .about-text p:last-of-type{
+    line-height: 1.4;
+    color:#777;
+}
+/*End About US section*/
+/*start Contact us section*/
+.contact{
+    padding-top:60px;
+    padding-bottom:60px;
+    background-color:#ded6c7;
+}
+.contact .container h2{
+    position:relative;
+    color:#A5CD81;
+    font-size:100px;
+    font-weight:800;
+    text-align:center;
+    margin-top:15px;
+    margin-left: 10%;
+}
+@media(max-width:767px) {
+    .contact .container h2{
+        font-size:50px;
+        
+    }
+}
+.contact .contact-info{
+    padding-top:30px;
+    text-align:center;
+}
+.contact .contact-info .label{
+    font-size:30px;
+    font-weight:800;
+    color:#2C4755;
+    letter-spacing:-2;
+    margin-bottom:10px;
+}
+.contact .contact-info .link{
+    display:block;
+    font-size:30px;
+    font-weight:800;
+    color:#10cab7;
+    text-decoration:none;
+}
+@media(max-width:767px) {
+    .contact .container .link{
+        font-size:20px;
+    }
+    .contact .contact-info .label{
+        font-size:20px;
+    }
+}
+
+.contact .contact-info .scoial-media p{
+    display:flex;
+    justify-content:center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #9797e4;
+}
+.contact .contact-info .scoial-media i{
+    font-size: 50px;
+    margin-left: 20px;
+    cursor: pointer;
+    color:#2C4755
+}
+/*End Contact us section*/
+/*Start Footer section*/
+.footer{
+    padding-top:40px;
+    padding-bottom:20px;
+    background-color:#2C4755;
+    color: #fff;
+    text-align:center;
+    font-size:25px;
+    font-weight:400;
+}
+.footer span{
+    font-size:30px;
+    color:#10cab7;
+    font-weight:600;
+}
+/*End Footer section*/
