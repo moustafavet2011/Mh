@@ -1,0 +1,593 @@
+<?php
+    if($_SERVER['REQUEST_METHOD']=='POST'){
+        $name = $_POST['name'];
+        $tel = $_POST['telephone'];
+        $mail = $_POST['mail'];
+        $msg = $_POST['message'];
+
+
+        $header = 'From: ' . $mail . '\r\n';
+        $content = 'Client Name:' . $name . 'Phone Number: ' . $tel . 'Message: ' . $msg ;
+
+        mail('contact@mhtechservices.fr', 'Subject', $content, $header);
+    }
+
+
+
+    ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="./Css/normalize.css">
+    <link rel="stylesheet"  href="./Css/template_3.css">
+    <link rel="stylesheet" href="./Css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;500;700;900&family=Open+Sans:wght@300;400;600;700;800&family=Work+Sans:ital,wght@0,200;0,400;0,500;1,200;1,300;1,700&display=swap" rel="stylesheet">
+
+    <title>MH Tech Services</title>
+</head>
+<body>
+    <!--Start Header-->
+    <div class="header" id="header">
+        <div class="container">
+            <a href="#" class="logo">Mh Services</a>
+            <ul class="main-nav">
+                <li><a href="#article">Articles</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#">Other Links</a>
+                    <!--Start MegaMenu-->
+                    <div class="mega-menu">
+                        <div class="image">
+                            <img src="./Images/Mh_logo.png" alt="">
+                        </div>
+                            <ul class="links">
+                                <li><a href="#contact">
+                                    <i class="far fa-comments fa-fw"></i>Contact</a>
+                                </li>
+                                <li><a href="#team-members">
+                                    <i class="far fa-user fa-fw"></i>Team Members</a>
+                                </li>
+                                <li><a href="#services">
+                                    <i class="far fa-building fa-fw"></i>Services</a>
+                                </li>
+                                <li><a href="#our-skills">
+                                    <i class="far fa-check-circle fa-fw"></i>Our Skills</a>
+                                </li>
+                                <li><a href="#work-steps">
+                                    <i class="far fa-clipboard fa-fw"></i>How It Work</a>
+                                </li>
+                            </ul>
+                    </div>
+                    <!--End MegaMenu-->
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--End Header-->
+    <!--Start Landing-->
+    <div class="landing">
+        <div class="container">
+            <div class="text">
+                <h1>Welcome, To the MH Services</h1>
+                <p>we are interested in providing you with all the services that can help you to get a better life and get through all of your problems</p>
+            </div>
+            <div class="image">
+                <img src="./Images/landing-new.svg"alt="">
+            </div>
+        </div>
+        <a href="#articles" class="go-down">
+            <i class="fas fa-angle-double-down fa-2x"></i>
+        </a>
+    </div>
+    <!--End Landing-->
+
+    <!--Start Articles-->
+    <div class="articles" id="article">
+        <h2 class="main-title">Articles</h2>
+        <div class="container">
+            <div class="box">
+                <img src="./Images/atricle-1.svg"alt="article">
+                <div class="content">
+                    <h3>JavaScript in the modern browser</h3>
+                    <p>you have looked at JavaScript 10 years ago and want to get up-to-speed quickly, definitely read this article</p>
+                </div>
+                <div class="info">
+                    <a href="https://www.w3schools.com/js/js_intro.asp" target="_blank">Read More</a>
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./Images/atricle-2.svg"alt="article">
+                <div class="content">
+                    <h3>Web Architecture </h3>
+                    <p>The basic architecture concepts which I believe every web developer should learn and understand. If you have just started with web development, you may find it complicated, but it’s worth reading. I won’t say much, as the below diagram says it all.</p>
+                </div>
+                <div class="info">
+                    <a href="https://www.w3schools.com/html/default.asp" target="_blank">Read More</a>
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./Images/atricle-3.svg"alt="article">
+                <div class="content">
+                    <h3>CSS3 Explained in Details</h3>
+                    <p>To be honest, like JavaScript, CSS has also changed a lot, and if you haven’t used CSS for a long time, this article will bring you up to speed.</p>
+                </div>
+                <div class="info">
+                    <a href="https://www.w3schools.com/css/css_intro.asp" target="_blank">Read More</a>
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./Images/atricle-4.svg"alt="article">
+                <div class="content">
+                    <h3>JavaScript fundamentals</h3>
+                    <p>Knowing the JavaScript fundamentals makes us better at understanding and using the language. This article will teach you some JavaScript fundamentals which many web developers overlook.</p>
+                </div>
+                <div class="info">
+                    <a href="https://www.w3schools.com/js/js_objects.asp" target="_blank">Read More</a>
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./Images/atricle-5.svg"alt="article">
+                <div class="content">
+                    <h3>Node.js</h3>
+                    <p>Node.js is a JavaScript runtime environment. Sounds great, but what does that mean? How does that work? All of these questions have been answered in this article.</p>
+                </div>
+                <div class="info">
+                    <a href="https://www.w3schools.com/nodejs/nodejs_intro.asp" target="_blank">Read More</a>
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./Images/atricle-6.svg"alt="article">
+                <div class="content">
+                    <h3>Top 10 JavaScript Frameworks to Learn in 2022</h3>
+                    <p>This is another fantastic article with a list of fantastic JavaScript frameworks for both frontend and backend development like Angular, Reactjs, Nodejs, etc.</p>
+                </div>
+                <div class="info">
+                    <a href="https://www.w3schools.com/js/js_examples.asp" target="_blank">Read More</a>
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./Images/atricle-7.svg"alt="article">
+                <div class="content">
+                    <h3>landed a full stack developer job</h3>
+                    <p>There is no better way to learn but from other people’s experience, and this article presents an opportunity to learn how the author manages to find a full-stack web developer job without relevant work experience, no tech degree,</p>
+                </div>
+                <div class="info">
+                    <a href="https://www.w3schools.com/php/php_intro.asp" target="_blank">Read More</a>
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./Images/article-8.svg"alt="article">
+                <div class="content">
+                    <h3>API Designing guidelines</h3>
+                    <p>REST APIs have transformed how the web should function. It’s also paved a road for mobile devices showing content from the web. Facebook, Google, Github, Netflix, and few other tech giants have given a chance to the developers to consume their data through APIs and became a platform for them.</p>
+                </div>
+                <div class="info">
+                    <a href="https://www.gravitee.io/platform/api-designer?utm_term=how%20to%20design%20a%20good%20api&utm_campaign=S_NA_API+Design_EN&utm_source=google&utm_medium=cpc&hsa_acc=4006284794&hsa_cam=18326685780&hsa_grp=139102801177&hsa_ad=621696432397&hsa_src=s&hsa_tgt=kwd-434333994148&hsa_kw=how%20to%20design%20a%20good%20api&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=EAIaIQobChMIjuDV387z-wIVBhoGAB35ugpXEAAYASAAEgLv4PD_BwE" target="_blank">Read More</a>
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="spikes"></div>
+    <!--End Articles-->
+    <!--Start gallery-->
+    <div class="gallery" id="gallery">
+        <h2 class="main-title">Gallery</h2>
+        <div class="container">
+            <div class="box">
+                <div class="image">
+                    <img src="./Images/mobile-app.svg"alt="gallery">
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="./Images/fashion.svg"alt="gallery">
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="./Images/siteweb.svg"alt="gallery">
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="./Images/hangman.svg"alt="gallery">
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="./Images/cv-writing.svg"alt="gallery">
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="./Images/marketing.svg"alt="gallery">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End gallery-->
+    <!--Start Features-->
+    <div class="feature" id="features">
+        <h2 class="main-title">Features</h2>
+        <div class="container">
+            <div class="box quality">
+                <div class="image">
+                    <img src="./Images/feature_1.jpg"alt="feature">
+                </div>
+                    <h2>Quality</h2>
+                    <p>our team do their best to deliver the best quality services that can be provided to our clients and that our mark in the market of development ''the quality is all that matter'' so we make sure that what we always deliver to our clients</p>
+                    <a href="#">More</a>
+            </div>
+            <div class="box time">
+                <div class="image">
+                    <img src="./Images/feature_2.jpg"alt="feature">
+                </div>
+                    <h2>Time</h2>
+                    <p>The time is an essential element for our clients especially in our domain that upgrade every minute so we have to make sure that our clients get the best of their times taking in consideration that the rapidity don't effect the qulaity of our work so we keep our promise </p>
+                    <a href="#">More</a>
+            </div>
+            <div class="box passion">
+                <div class="image">
+                    <img src="./Images/feature_3.jpg"alt="feature">
+                </div>
+                    <h2>Passion</h2>
+                    <p>The passion is what make our team do their best in the work because we believe in if love what you do you will do it in the best way so we choose every one in our team very carefully to match the results that we provide to our clients </p>
+                    <a href="#">More</a>
+            </div>
+        </div>
+    </div>
+    <div class="spikes"></div>
+    <!--End Features-->
+    <!--Start Contact-->
+    <div class="contact" id="contact">
+        <h2 class="main-title">Contact</h2>
+        <div class="container">
+            <div class="form-page">
+                <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+                    <div class="form-name">
+                        <label for="name">Your Name: </label>
+                        <input type="text" name="name" id="name" placeholder="write your name" required>
+                    </div>
+                    <div class="form-tel">
+                        <label for="tel">Your Phone Number: </label>
+                        <input type="tel" name="telephone" id="tel" placeholder="write your phone number" required>
+                    </div>
+                    <div class="form-mail">
+                        <label for="mail">Your Email Address: </label>
+                        <input type="email" name="mail" id="mail" placeholder="write your email address" required>
+                    </div>
+                    <div class="form-msg">
+                        <label for="message">Your Message: </label>
+                        <textarea name="message" id="message" placeholder="write your message" required></textarea>
+                    </div>
+                        <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="spikes"></div>
+    <!--End Contact-->
+    <!--Start Team Members-->
+    <div class="members" id="team-members">
+        <h2 class="main-title">Team Members</h2>
+        <div class="container">
+            <div class="box">
+                <div class="data">
+                    <img src="./Images/mostafa.svg" alt="team">
+                    <div class="social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3>Moustafa</h3>
+                    <p>Full Stack Developer</p>
+                    <a href="https://mhtechservices.fr/hussein/" target="_blank" class="get-in-touch">Get In Touch</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="data">
+                    <img src="./Images/melissa.svg" alt="team">
+                    <div class="social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3>Melissa</h3>
+                    <p>Fashion Designer</p>
+                    <a href="https://mhtechservices.fr/melissa/" target="_blank" class="get-in-touch">Get In Touch</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="data">
+                    <img src="./Images/oael.svg" alt="team">
+                    <div class="social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3>Oael</h3>
+                    <p>Full Stack Developer</p>
+                    <a href="https://mhtechservices.fr/oael/" target="_blank" class="get-in-touch">Get In Touch</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="data">
+                    <img src="./Images/oasel.svg" alt="team">
+                    <div class="social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3>Oasel</h3>
+                    <p>Front End Developer</p>
+                    <a href="https://mhtechservices.fr/oael/" class="get-in-touch">Get In Touch</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="data">
+                    <img src="./Images/myriam.svg" alt="team">
+                    <div class="social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3>Myriam</h3>
+                    <p>Ux / UI Developer</p>
+                    <a href="https://mhtechservices.fr/oael/" class="get-in-touch">Get In Touch</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="data">
+                    <img src="./Images/teim.svg" alt="team">
+                    <div class="social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3>TeÏm</h3>
+                    <p>Designer / Editor</p>
+                    <a href="https://mhtechservices.fr/oael/" class="get-in-touch">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="spikes"></div>
+    <!--End Team Members-->
+    <!--Start Services-->
+    <div class="services" id="services">
+        <h2 class="main-title">Services</h2>
+        <div class="container">
+            <div class="box">
+                <i class="fa-solid fa-globe fa-4x"></i>
+                <h3>Designing websites</h3>
+                <div class="info">
+                    <a href="#">Details</a>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-tools fa-4x"></i>
+                <h3>Fixing Issues</h3>
+                <div class="info">
+                    <a href="#">Details</a>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fa-brands fa-app-store-ios fa-4x"></i>
+                <h3>Designing Mobile Application</h3>
+                <div class="info">
+                    <a href="#">Details</a>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-laptop-code fa-4x"></i>
+                <h3>SEO Services</h3>
+                <div class="info">
+                    <a href="#">Details</a>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-vest-patches fa-4x"></i>
+                <h3>FASHION Services</h3>
+                <div class="info">
+                    <a href="#">Details</a>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-thumbs-up fa-4x"></i>
+                <h3>SOCIAL MEDIA</h3>
+                <div class="info">
+                    <a href="#">Details</a>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fa-regular fa-eye fa-4x"></i>
+                <h3>Designing LOGO</h3>
+                <div class="info">
+                    <a href="#">Details</a>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-pen-to-square fa-4x"></i>
+                <h3>EDITING Services</h3>
+                <div class="info">
+                    <a href="#">Details</a>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-bullhorn fa-4x"></i>
+                <h3>OTHER SERVICES</h3>
+                <div class="info">
+                    <a href="#">Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Services-->
+    <!--Start Our Skills-->
+    <div class="our-skills" id="our-skills">
+        <h2 class="main-title">Our Skills</h2>
+        <div class="container">
+                <img src="./Images/our_skills.png" alt="skill">
+            <div class="skills">
+                <div class="skill">
+                    <h3>HTML CSS JavaScript<span>95%</span></h3>
+                    <div class="the-progress">
+                        <span style ="width: 95%"></span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3>Fashion Design<span>89%</span></h3>
+                    <div class="the-progress">
+                        <span style ="width: 89%"></span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3>UX / UI <span>92%</span></h3>
+                    <div class="the-progress">
+                        <span style ="width: 92%"></span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3>PHP<span>92%</span></h3>
+                    <div class="the-progress">
+                        <span style ="width: 92%"></span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3>Photoshop<span>95%</span></h3>
+                    <div class="the-progress">
+                        <span style ="width: 95%"></span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3>Design<span>96%</span></h3>
+                    <div class="the-progress">
+                        <span style ="width: 96%"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="spikes"></div>
+    <!--End Our Skills-->
+    <!--Start Work Steps-->
+    <div class="work-steps" id="work-steps">
+        <h2 class="main-title">How It Works ?</h2>
+        <div class="container">
+            <img src="./Images/works.png" alt="work">
+            <div class="data">
+                <div class="box">
+                    <div class="image">
+                        <img src="./Images/works_1.png"alt="work">
+                    </div>
+                    <div class="info">
+                    <h3>Business Analysis</h3>
+                    <p>After We receive the projects with all the details we start to analysis the work and the effects of it in the market actually and try to anticipate the effects in the future by analysing all the data and compare it to our database and get out the most accurate numbers</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <img src="./Images/works_2.png"alt="work">
+                    </div>
+                    <div class="info">
+                    <h3>Architecture</h3>
+                    <p>Once analysis is done our team start to build many version for the project and try multiple times the best and the most effective version and rechecking it before putting it into the market</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <img src="./Images/works_3.jpg"alt="work">
+                    </div>
+                    <div class="info">
+                    <h3>Developement</h3>
+                    <p>development is the key to every successful project so we keep developing the project to get to the best user experience that satisfy our clients and the users of this projects </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="spikes"></div>
+    <!--End Work Steps-->
+    <!--Start Footer-->
+    <div class="footer">
+        <div class="container">
+            <a href="#article" class="button-up">UP</a>
+            <div class="footer-box">
+                <div class="content">
+                    <h2>MH Services</h2>
+                    <div class="social">
+                        <a href="https://www.facebook.com/profile.php?id=100072445992333" class="facebook" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://twitter.com/HusseinMila" class="twitter"><i class="fa-brands fa-square-twitter"  target="_blank"></i></a>
+                        <a href="https://www.youtube.com/channel/UCJKyG024x_XdjcTYVrrEovg" class="youtube" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://fr.linkedin.com/" class="linkedin" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <p>We Give you all the services that you need to reach your goals</p>
+                </div>
+            </div>
+            <div class="footer-box">
+                <ul class="links">
+                    <li><a href="https://github.com/" target="_blank">Follow Our work</a></li>
+                    <li><a href="https://mhtechservices.fr/" target="_blank">Learn more </a></li>
+                    <li><a href="#contact" target="_blank">Contact Link</a></li>
+                    <li><a href="https://www.patreon.com/user?u=84164747" target="_blank">Help us improve</a></li>
+                    <li><a href="#contact" target="_blank">Share your ideas</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <div class="address">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span class="location">
+                        European Union, France
+                    </span>
+                </div>
+                <div class="time">
+                    <i class="fa-solid fa-business-time"></i>
+                    <span>Business Hours: 24H/24 7j/7</span>
+                </div>
+                <div class="contact-footer">
+                    <i class="fa-solid fa-phone"></i>
+                    <span class="phone">+330666278123 / +330748526675</span>
+                </div>
+            </div>
+            <div class="footer-box">
+                <div class="image">
+                    <img src="./Images/footer.jpg"alt="footer">
+                </div>
+            </div>
+        </div>
+                <p class="copy-right">Copyright &copy; <a href="#">MH Services</a>2022</p>
+    </div>
+    <!--End Footer-->
+</body>
+</html>
